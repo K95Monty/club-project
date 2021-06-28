@@ -1,0 +1,80 @@
+#calender-header h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #cf7d2d;
+  text-shadow: -1px 1px 2px rgb(61,57,35),
+         -1px 3px 3px rgba(61,57,35,0.6);
+  background: seashell;
+  padding: 10px;
+}
+
+#calendar {
+  font-family: Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.calendar-wrapper {
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: 1px 1px 15px 7px rgba(61,57,35,0.61);
+  font: 100% system-ui;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.first-day {
+  grid-column-start: 3;
+}
+
+
+.day-name {
+  background: seashell;
+  font-weight: bold;
+  color: #cf7d2d;
+  font-size: 1.5rem;
+}
+
+.calendar-wrapper h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #cf7d2d;
+  font-weight: bold;
+  background-color: rgba(34, 193, 195, 0.8);
+  text-shadow: -1px 1px 2px rgb(61,57,35),
+         -1px 3px 3px rgba(61,57,35,0.6),
+         -1px 3px 2px rgb(255, 245, 238);
+  padding: 8px;
+}
+.calendar-wrapper ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(34, 193, 195, 0.8);
+}
+.calendar li {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.calendar li:active {
+  background-color: seashell;
+  border-radius: 4px;
+  color: #cf7d2d;
+  transition: 
+}
+
+#calendar-small {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: seashell;
+  font-weight: bold;
+  color: #cf7d2d;
+  padding: 15px;
+  margin: 0 auto;
+}
