@@ -4,7 +4,7 @@
 		<title>Codecademy - Club Responsive Project</title>
 		<link href="styles.css" rel="stylesheet" type="text/CSS">
 	</head>
-	<body>
+	<body onload="currentMonth()">
 		<header>
 			<h1>Cosy Food Club</h1>
 			<h3>Meet Up - Have Fun - Chow Down</h3>
@@ -33,8 +33,8 @@
 					<h2>Places We Visit</h2>
 				</div>
 				<div id="rest-content">
-					<p>This is a collection of just a handful of places we like to go and eat at.</p>
-					<p id="mobile-display">Do you have a favourite place to eat?</p>
+					<p>This is a small collection of a handful of places we like to go and eat at.</p>
+					<p id="mobile-display">Do you have a favourite place to wine and dine?</p>
 				</div>
 				<div id="spice" class="rest">
 					<div id="spice-img"></div>
@@ -116,11 +116,11 @@
 		</main>
 		<aside>
 			<div id="calender-header">
-				<h2 >Book a day with us</h2>
+				<h2>Events Planned</h2>
 			</div>
 			<div id="calendar">
 				<div class="calendar-wrapper">
-				  <h3>December 2020</h3>
+				  <h3 id="month">...</h3>
 				  <ol class="calendar">
 			    
 				    <li class="day-name">Sun</li>
@@ -167,7 +167,7 @@
 				</div>
 			</div>
 			<div id="calendar-small">
-				<span>Before setting off, we meet at the <strong>Furnace Inn</strong> for drinks before setting off.</span>
+				<span>Before setting off, we meet at the <a href="https://www.google.com/maps/place/Furnace+Inn,+9+Duke+St,+Derby+DE1+3BX/data=!4m2!3m1!1s0x4879f11544eb9cad:0xbb9bcb3c4f0f16d9?sa=X&ved=2ahUKEwjylpnthafyAhVSe8AKHa0pAyYQ8gF6BAgIEAE" target="_blank">Furnace Inn</a> for drinks before setting off.</span>
 			</div>
 		</aside>
 		<footer>
@@ -178,7 +178,14 @@
 				<h4>DE1 2EB</h4>
 				<h4>thecosyfoodclub_derby@gmail.com	
 			</div>
-			<h4 id="copyright">&copy; Copyright 2021, Cosy Food Club</h4>
+			<h4 id="copyright">&copy; Copyright <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>, Cosy Food Club</h4>
 		</footer>
+		<script type="text/javascript">
+			function currentMonth() {
+    			const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    			const date = new Date();
+    			document.getElementById('month').innerHTML = months[date.getMonth()];
+    		};
+    	</script>
 	</body>
 </html>
